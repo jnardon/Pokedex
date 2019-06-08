@@ -45,14 +45,18 @@ extension PokemonListViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
+
 }
 
 extension PokemonListViewController: UITableViewDelegate {
     
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = self.storyboard
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") {
+
+            self.navigationController?.present(detailViewController, animated: true)
+        }
+    }
 }
 
 // TODO: criar uma ViewModel de verdade
