@@ -6,5 +6,6 @@ target 'Pokedex' do
   use_frameworks!
 
   # Pods for Pokedex
+  pod 'Nuke'
 
 end
