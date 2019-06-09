@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class RequestMaker {
-    public static let decoder = JSONDecoder()
+class RequestMaker {
+    static let decoder = JSONDecoder()
     
     enum Endpoint {
         

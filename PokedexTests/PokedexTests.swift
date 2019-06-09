@@ -6,7 +6,7 @@
 //  Copyright © 2019 CWI Software. All rights reserved.
 //
 
-import Pokedex
+@testable import Pokedex
 import XCTest
 
 class PokedexTests: XCTestCase {
