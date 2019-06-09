@@ -1,5 +1,5 @@
 //
-//  PokedexTests.swift
+//  RequestMakerTests.swift
 //  PokedexTests
 //
 //  Created by Marcelo Gobetti on 6/9/19.
@@ -9,7 +9,7 @@
 @testable import Pokedex
 import XCTest
 
-class PokedexTests: XCTestCase {
+class RequestMakerTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,7 +20,7 @@ class PokedexTests: XCTestCase {
     }
 
     func testDecoding() {
-        let jsonURL = Bundle(for: PokedexTests.self).url(forResource: "pokemons", withExtension: "json")!
+        let jsonURL = Bundle(for: RequestMakerTests.self).url(forResource: "pokemons", withExtension: "json")!
         let data = try! Data(contentsOf: jsonURL)
 
         XCTAssertNoThrow(try Pokedex.RequestMaker.decoder.decode(PokemonResponse.self, from: data))
