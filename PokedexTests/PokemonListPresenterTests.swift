@@ -22,7 +22,11 @@ class PokemonListPresenterTests: XCTestCase {
     func testReloadDataIsCalledOnSuccess() {
         let expectation = XCTestExpectation(description: "")
 
-        let view = PokemonListViewMock(onReloadDataCalled: {
+        let session = URLSessionMock(data: listStub)
+        let requestMaker = RequestMaker(session: session)
+        let presenter = PokemonListPresenter(requestMaker: requestMaker)
+
+        let view = PokemonListViewMock(presenter: presenter, onReloadDataCalled: {
             expectation.fulfill()
         })
         view.bind()
@@ -34,10 +38,12 @@ class PokemonListPresenterTests: XCTestCase {
 }
 
 class PokemonListViewMock: PokemonListViewType {
-    let presenter: PokemonListPresenterType = PokemonListPresenter()
+    let presenter: PokemonListPresenterType
     let onReloadDataCalled: () -> Void
 
-    init(onReloadDataCalled: @escaping () -> Void) {
+    init(presenter: PokemonListPresenterType,
+         onReloadDataCalled: @escaping () -> Void) {
+        self.presenter = presenter
         self.onReloadDataCalled = onReloadDataCalled
     }
 

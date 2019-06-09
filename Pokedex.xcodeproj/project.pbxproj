@@ -31,6 +31,9 @@
 		D4B888B322ADBD2F0042894A /* PokemonListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B222ADBD2F0042894A /* PokemonListContract.swift */; };
 		D4B888B722ADBDF50042894A /* PokemonListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B622ADBDF50042894A /* PokemonListPresenter.swift */; };
 		D4B888B922ADC0E80042894A /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B822ADC0E80042894A /* URLSessionType.swift */; };
+		D4B888BD22ADC1860042894A /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888BC22ADC1860042894A /* URLSessionMock.swift */; };
+		D4B888C022ADC2B40042894A /* JSONStubFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888BF22ADC2B40042894A /* JSONStubFactory.swift */; };
+		D4B888C222ADC3A30042894A /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B888C122ADC3A20042894A /* list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		D4B888B222ADBD2F0042894A /* PokemonListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListContract.swift; sourceTree = "<group>"; };
 		D4B888B622ADBDF50042894A /* PokemonListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPresenter.swift; sourceTree = "<group>"; };
 		D4B888B822ADC0E80042894A /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
+		D4B888BC22ADC1860042894A /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		D4B888BF22ADC2B40042894A /* JSONStubFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStubFactory.swift; sourceTree = "<group>"; };
+		D4B888C122ADC3A20042894A /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		F971D046DECCDE613A6170D3 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +215,9 @@
 		D4B888A022ADA4C50042894A /* PokedexTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4B888BB22ADC17E0042894A /* Mocks */,
 				D4B888A922ADA4F70042894A /* Samples */,
+				D4B888BE22ADC2A30042894A /* Stubs */,
 				D4B888B022ADBB4F0042894A /* PokemonListPresenterTests.swift */,
 				D4B888A122ADA4C50042894A /* RequestMakerTests.swift */,
 				D4B888A322ADA4C50042894A /* Info.plist */,
@@ -220,6 +228,7 @@
 		D4B888A922ADA4F70042894A /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				D4B888C122ADC3A20042894A /* list.json */,
 				D4B888AA22ADA50D0042894A /* pokemons.json */,
 			);
 			path = Samples;
@@ -233,6 +242,22 @@
 				D4B888B622ADBDF50042894A /* PokemonListPresenter.swift */,
 			);
 			path = PokemonList;
+			sourceTree = "<group>";
+		};
+		D4B888BB22ADC17E0042894A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D4B888BC22ADC1860042894A /* URLSessionMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D4B888BE22ADC2A30042894A /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				D4B888BF22ADC2B40042894A /* JSONStubFactory.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B888AB22ADA50D0042894A /* pokemons.json in Resources */,
+				D4B888C222ADC3A30042894A /* list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B888BD22ADC1860042894A /* URLSessionMock.swift in Sources */,
 				D4B888B122ADBB4F0042894A /* PokemonListPresenterTests.swift in Sources */,
 				D4B888A222ADA4C50042894A /* RequestMakerTests.swift in Sources */,
+				D4B888C022ADC2B40042894A /* JSONStubFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

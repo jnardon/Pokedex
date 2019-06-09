@@ -1,0 +1,183 @@
+{
+    "pokemons": [
+        {
+            "name": "bulbasaur",
+            "id": "1",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+        },
+        {
+            "name": "ivysaur",
+            "id": "2",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+        },
+        {
+            "name": "venusaur",
+            "id": "3",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+        },
+        {
+            "name": "charmander",
+            "id": "4",
+            "types": [
+                "fire"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+        },
+        {
+            "name": "charmeleon",
+            "id": "5",
+            "types": [
+                "fire"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+        },
+        {
+            "name": "charizard",
+            "id": "6",
+            "types": [
+                "fire",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+        },
+        {
+            "name": "squirtle",
+            "id": "7",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+        },
+        {
+            "name": "wartortle",
+            "id": "8",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+        },
+        {
+            "name": "blastoise",
+            "id": "9",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+        },
+        {
+            "name": "caterpie",
+            "id": "10",
+            "types": [
+                "bug"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+        },
+        {
+            "name": "metapod",
+            "id": "11",
+            "types": [
+                "bug"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+        },
+        {
+            "name": "butterfree",
+            "id": "12",
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+        },
+        {
+            "name": "weedle",
+            "id": "13",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png"
+        },
+        {
+            "name": "kakuna",
+            "id": "14",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
+        },
+        {
+            "name": "beedrill",
+            "id": "15",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+        },
+        {
+            "name": "pidgey",
+            "id": "16",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+        },
+        {
+            "name": "pidgeotto",
+            "id": "17",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+        },
+        {
+            "name": "pidgeot",
+            "id": "18",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png"
+        },
+        {
+            "name": "rattata",
+            "id": "19",
+            "types": [
+                "normal"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+        },
+        {
+            "name": "raticate",
+            "id": "20",
+            "types": [
+                "normal"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+        },
+        {
+            "name": "pikachu",
+            "id": "25",
+            "types": [
+                "electric"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+        }
+    ]
+}

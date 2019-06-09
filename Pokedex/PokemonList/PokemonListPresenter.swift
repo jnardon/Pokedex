@@ -12,9 +12,13 @@ class PokemonListPresenter: NSObject {
 
     weak var view: PokemonListViewType?
 
-    private let requestMaker = RequestMaker()
+    private let requestMaker: RequestMaker
 
     private var pokemonList = [Pokemon]()
+
+    init(requestMaker: RequestMaker = RequestMaker()) {
+        self.requestMaker = requestMaker
+    }
 
 }
 
