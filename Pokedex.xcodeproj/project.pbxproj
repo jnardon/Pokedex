@@ -30,6 +30,7 @@
 		D4B888B122ADBB4F0042894A /* PokemonListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B022ADBB4F0042894A /* PokemonListPresenterTests.swift */; };
 		D4B888B322ADBD2F0042894A /* PokemonListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B222ADBD2F0042894A /* PokemonListContract.swift */; };
 		D4B888B722ADBDF50042894A /* PokemonListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B622ADBDF50042894A /* PokemonListPresenter.swift */; };
+		D4B888B922ADC0E80042894A /* URLSessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888B822ADC0E80042894A /* URLSessionType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D4B888B022ADBB4F0042894A /* PokemonListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPresenterTests.swift; sourceTree = "<group>"; };
 		D4B888B222ADBD2F0042894A /* PokemonListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListContract.swift; sourceTree = "<group>"; };
 		D4B888B622ADBDF50042894A /* PokemonListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPresenter.swift; sourceTree = "<group>"; };
+		D4B888B822ADC0E80042894A /* URLSessionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionType.swift; sourceTree = "<group>"; };
 		F971D046DECCDE613A6170D3 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				96DD996622ABE16C0036A7A7 /* RequestMaker.swift */,
+				D4B888B822ADC0E80042894A /* URLSessionType.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B888B922ADC0E80042894A /* URLSessionType.swift in Sources */,
 				96DD996922ABE1A00036A7A7 /* Pokemon.swift in Sources */,
 				96DD996C22AC11E80036A7A7 /* PokemonTableViewCell.swift in Sources */,
 				AB7657B422B140F600D1060A /* PokemonTypeView.swift in Sources */,

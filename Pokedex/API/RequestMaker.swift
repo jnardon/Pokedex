@@ -43,7 +43,13 @@ class RequestMaker {
     }
     
     let baseUrl = "http://localhost:3000/"
-    let session = URLSession.shared
+    let session: URLSessionType
+
+    init(session: URLSessionType = URLSession.shared) {
+        self.session = session
+    }
+
+
     typealias CompletionCallback<T: Decodable> = (RequestResult<T>) -> Void
     typealias SuccessCallback<T: Decodable> = (T) -> Void
 
