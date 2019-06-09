@@ -72,7 +72,7 @@ class RequestMaker {
             return
         }
         
-        let dataTask = session.dataTask(with: url) {
+        session.request(with: url) {
             (data: Data?, response: URLResponse?, error: Swift.Error?) in
             
             guard error == nil else {
@@ -92,8 +92,6 @@ class RequestMaker {
                 completion(.failure(.some(error)))
             }
         }
-        
-        dataTask.resume()
     }
     
 }

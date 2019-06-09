@@ -16,8 +16,7 @@ class URLSessionMock: URLSessionType {
         self.data = data
     }
 
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    func request(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         completionHandler(data, nil, nil)
-        return URLSessionDataTask()
     }
 }
