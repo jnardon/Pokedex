@@ -1,0 +1,945 @@
+{
+    "list": {
+        "pokemons": [
+            {
+                "name": "bulbasaur",
+                "id": "1",
+                "types": [
+                    "grass",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+            },
+            {
+                "name": "ivysaur",
+                "id": "2",
+                "types": [
+                    "grass",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+            },
+            {
+                "name": "venusaur",
+                "id": "3",
+                "types": [
+                    "grass",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+            },
+            {
+                "name": "charmander",
+                "id": "4",
+                "types": [
+                    "fire"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+            },
+            {
+                "name": "charmeleon",
+                "id": "5",
+                "types": [
+                    "fire"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+            },
+            {
+                "name": "charizard",
+                "id": "6",
+                "types": [
+                    "fire",
+                    "flying"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+            },
+            {
+                "name": "squirtle",
+                "id": "7",
+                "types": [
+                    "water"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+            },
+            {
+                "name": "wartortle",
+                "id": "8",
+                "types": [
+                    "water"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+            },
+            {
+                "name": "blastoise",
+                "id": "9",
+                "types": [
+                    "water"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+            },
+            {
+                "name": "caterpie",
+                "id": "10",
+                "types": [
+                    "bug"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+            },
+            {
+                "name": "metapod",
+                "id": "11",
+                "types": [
+                    "bug"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+            },
+            {
+                "name": "butterfree",
+                "id": "12",
+                "types": [
+                    "bug",
+                    "flying"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+            },
+            {
+                "name": "weedle",
+                "id": "13",
+                "types": [
+                    "bug",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png"
+            },
+            {
+                "name": "kakuna",
+                "id": "14",
+                "types": [
+                    "bug",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png"
+            },
+            {
+                "name": "beedrill",
+                "id": "15",
+                "types": [
+                    "bug",
+                    "poison"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+            },
+            {
+                "name": "pidgey",
+                "id": "16",
+                "types": [
+                    "normal",
+                    "flying"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+            },
+            {
+                "name": "pidgeotto",
+                "id": "17",
+                "types": [
+                    "normal",
+                    "flying"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+            },
+            {
+                "name": "pidgeot",
+                "id": "18",
+                "types": [
+                    "normal",
+                    "flying"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png"
+            },
+            {
+                "name": "rattata",
+                "id": "19",
+                "types": [
+                    "normal"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+            },
+            {
+                "name": "raticate",
+                "id": "20",
+                "types": [
+                    "normal"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+            },
+            {
+                "name": "pikachu",
+                "id": "25",
+                "types": [
+                    "electric"
+                ],
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+            }
+        ]
+    },
+    "details": [
+        {
+            "name": "bulbasaur",
+            "id": "1",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 45
+                },
+                {
+                    "name": "special-defense",
+                    "value": 65
+                },
+                {
+                    "name": "special-attack",
+                    "value": 65
+                },
+                {
+                    "name": "defense",
+                    "value": 49
+                },
+                {
+                    "name": "attack",
+                    "value": 49
+                },
+                {
+                    "name": "hp",
+                    "value": 45
+                }
+            ],
+            "description": "A strange seed was\nplanted on its\nback at birth.\fThe plant sprouts\nand grows with\nthis POKéMON."
+        },
+        {
+            "name": "ivysaur",
+            "id": "2",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 60
+                },
+                {
+                    "name": "special-defense",
+                    "value": 80
+                },
+                {
+                    "name": "special-attack",
+                    "value": 80
+                },
+                {
+                    "name": "defense",
+                    "value": 63
+                },
+                {
+                    "name": "attack",
+                    "value": 62
+                },
+                {
+                    "name": "hp",
+                    "value": 60
+                }
+            ],
+            "description": "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs."
+        },
+        {
+            "name": "venusaur",
+            "id": "3",
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 80
+                },
+                {
+                    "name": "special-defense",
+                    "value": 100
+                },
+                {
+                    "name": "special-attack",
+                    "value": 100
+                },
+                {
+                    "name": "defense",
+                    "value": 83
+                },
+                {
+                    "name": "attack",
+                    "value": 82
+                },
+                {
+                    "name": "hp",
+                    "value": 80
+                }
+            ],
+            "description": "The plant blooms\nwhen it is\nabsorbing solar\fenergy. It stays\non the move to\nseek sunlight."
+        },
+        {
+            "name": "charmander",
+            "id": "4",
+            "types": [
+                "fire"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 65
+                },
+                {
+                    "name": "special-defense",
+                    "value": 50
+                },
+                {
+                    "name": "special-attack",
+                    "value": 60
+                },
+                {
+                    "name": "defense",
+                    "value": 43
+                },
+                {
+                    "name": "attack",
+                    "value": 52
+                },
+                {
+                    "name": "hp",
+                    "value": 39
+                }
+            ],
+            "description": "Obviously prefers\nhot places. When\nit rains, steam\fis said to spout\nfrom the tip of\nits tail."
+        },
+        {
+            "name": "charmeleon",
+            "id": "5",
+            "types": [
+                "fire"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 80
+                },
+                {
+                    "name": "special-defense",
+                    "value": 65
+                },
+                {
+                    "name": "special-attack",
+                    "value": 80
+                },
+                {
+                    "name": "defense",
+                    "value": 58
+                },
+                {
+                    "name": "attack",
+                    "value": 64
+                },
+                {
+                    "name": "hp",
+                    "value": 58
+                }
+            ],
+            "description": "When it swings\nits burning tail,\nit elevates the\ftemperature to\nunbearably high\nlevels."
+        },
+        {
+            "name": "charizard",
+            "id": "6",
+            "types": [
+                "fire",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 100
+                },
+                {
+                    "name": "special-defense",
+                    "value": 85
+                },
+                {
+                    "name": "special-attack",
+                    "value": 109
+                },
+                {
+                    "name": "defense",
+                    "value": 78
+                },
+                {
+                    "name": "attack",
+                    "value": 84
+                },
+                {
+                    "name": "hp",
+                    "value": 78
+                }
+            ],
+            "description": "Spits fire that\nis hot enough to\nmelt boulders.\fKnown to cause\nforest fires\nunintentionally."
+        },
+        {
+            "name": "squirtle",
+            "id": "7",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 43
+                },
+                {
+                    "name": "special-defense",
+                    "value": 64
+                },
+                {
+                    "name": "special-attack",
+                    "value": 50
+                },
+                {
+                    "name": "defense",
+                    "value": 65
+                },
+                {
+                    "name": "attack",
+                    "value": 48
+                },
+                {
+                    "name": "hp",
+                    "value": 44
+                }
+            ],
+            "description": "After birth, its\nback swells and\nhardens into a\fshell. Powerfully\nsprays foam from\nits mouth."
+        },
+        {
+            "name": "wartortle",
+            "id": "8",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 58
+                },
+                {
+                    "name": "special-defense",
+                    "value": 80
+                },
+                {
+                    "name": "special-attack",
+                    "value": 65
+                },
+                {
+                    "name": "defense",
+                    "value": 80
+                },
+                {
+                    "name": "attack",
+                    "value": 63
+                },
+                {
+                    "name": "hp",
+                    "value": 59
+                }
+            ],
+            "description": "Often hides in\nwater to stalk\nunwary prey. For\fswimming fast, it\nmoves its ears to\nmaintain balance."
+        },
+        {
+            "name": "blastoise",
+            "id": "9",
+            "types": [
+                "water"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 78
+                },
+                {
+                    "name": "special-defense",
+                    "value": 105
+                },
+                {
+                    "name": "special-attack",
+                    "value": 85
+                },
+                {
+                    "name": "defense",
+                    "value": 100
+                },
+                {
+                    "name": "attack",
+                    "value": 83
+                },
+                {
+                    "name": "hp",
+                    "value": 79
+                }
+            ],
+            "description": "A brutal POKéMON\nwith pressurized\nwater jets on its\fshell. They are\nused for high\nspeed tackles."
+        },
+        {
+            "name": "caterpie",
+            "id": "10",
+            "types": [
+                "bug"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 45
+                },
+                {
+                    "name": "special-defense",
+                    "value": 20
+                },
+                {
+                    "name": "special-attack",
+                    "value": 20
+                },
+                {
+                    "name": "defense",
+                    "value": 35
+                },
+                {
+                    "name": "attack",
+                    "value": 30
+                },
+                {
+                    "name": "hp",
+                    "value": 45
+                }
+            ],
+            "description": "Its short feet\nare tipped with\nsuction pads that\fenable it to\ntirelessly climb\nslopes and walls."
+        },
+        {
+            "name": "metapod",
+            "id": "11",
+            "types": [
+                "bug"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 30
+                },
+                {
+                    "name": "special-defense",
+                    "value": 25
+                },
+                {
+                    "name": "special-attack",
+                    "value": 25
+                },
+                {
+                    "name": "defense",
+                    "value": 55
+                },
+                {
+                    "name": "attack",
+                    "value": 20
+                },
+                {
+                    "name": "hp",
+                    "value": 50
+                }
+            ],
+            "description": "This POKéMON is\nvulnerable to\nattack while its\fshell is soft,\nexposing its weak\nand tender body."
+        },
+        {
+            "name": "butterfree",
+            "id": "12",
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 70
+                },
+                {
+                    "name": "special-defense",
+                    "value": 80
+                },
+                {
+                    "name": "special-attack",
+                    "value": 90
+                },
+                {
+                    "name": "defense",
+                    "value": 50
+                },
+                {
+                    "name": "attack",
+                    "value": 45
+                },
+                {
+                    "name": "hp",
+                    "value": 60
+                }
+            ],
+            "description": "In battle, it\nflaps its wings\nat high speed to\frelease highly\ntoxic dust into\nthe air."
+        },
+        {
+            "name": "weedle",
+            "id": "13",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 50
+                },
+                {
+                    "name": "special-defense",
+                    "value": 20
+                },
+                {
+                    "name": "special-attack",
+                    "value": 20
+                },
+                {
+                    "name": "defense",
+                    "value": 30
+                },
+                {
+                    "name": "attack",
+                    "value": 35
+                },
+                {
+                    "name": "hp",
+                    "value": 40
+                }
+            ],
+            "description": "Often found in\nforests, eating\nleaves.\fIt has a sharp\nvenomous stinger\non its head."
+        },
+        {
+            "name": "kakuna",
+            "id": "14",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 35
+                },
+                {
+                    "name": "special-defense",
+                    "value": 25
+                },
+                {
+                    "name": "special-attack",
+                    "value": 25
+                },
+                {
+                    "name": "defense",
+                    "value": 50
+                },
+                {
+                    "name": "attack",
+                    "value": 25
+                },
+                {
+                    "name": "hp",
+                    "value": 45
+                }
+            ],
+            "description": "Almost incapable\nof moving, this\nPOKéMON can only\fharden its shell\nto protect itself\nfrom predators."
+        },
+        {
+            "name": "beedrill",
+            "id": "15",
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 75
+                },
+                {
+                    "name": "special-defense",
+                    "value": 80
+                },
+                {
+                    "name": "special-attack",
+                    "value": 45
+                },
+                {
+                    "name": "defense",
+                    "value": 40
+                },
+                {
+                    "name": "attack",
+                    "value": 90
+                },
+                {
+                    "name": "hp",
+                    "value": 65
+                }
+            ],
+            "description": "Flies at high\nspeed and attacks\nusing its large\fvenomous stingers\non its forelegs\nand tail."
+        },
+        {
+            "name": "pidgey",
+            "id": "16",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 56
+                },
+                {
+                    "name": "special-defense",
+                    "value": 35
+                },
+                {
+                    "name": "special-attack",
+                    "value": 35
+                },
+                {
+                    "name": "defense",
+                    "value": 40
+                },
+                {
+                    "name": "attack",
+                    "value": 45
+                },
+                {
+                    "name": "hp",
+                    "value": 40
+                }
+            ],
+            "description": "A common sight in\nforests and woods.\nIt flaps its\fwings at ground\nlevel to kick up\nblinding sand."
+        },
+        {
+            "name": "pidgeotto",
+            "id": "17",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 71
+                },
+                {
+                    "name": "special-defense",
+                    "value": 50
+                },
+                {
+                    "name": "special-attack",
+                    "value": 50
+                },
+                {
+                    "name": "defense",
+                    "value": 55
+                },
+                {
+                    "name": "attack",
+                    "value": 60
+                },
+                {
+                    "name": "hp",
+                    "value": 63
+                }
+            ],
+            "description": "Very protective\nof its sprawling\nterritorial area,\fthis POKéMON will\nfiercely peck at\nany intruder."
+        },
+        {
+            "name": "pidgeot",
+            "id": "18",
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 101
+                },
+                {
+                    "name": "special-defense",
+                    "value": 70
+                },
+                {
+                    "name": "special-attack",
+                    "value": 70
+                },
+                {
+                    "name": "defense",
+                    "value": 75
+                },
+                {
+                    "name": "attack",
+                    "value": 80
+                },
+                {
+                    "name": "hp",
+                    "value": 83
+                }
+            ],
+            "description": "When hunting, it\nskims the surface\nof water at high\fspeed to pick off\nunwary prey such\nas MAGIKARP."
+        },
+        {
+            "name": "rattata",
+            "id": "19",
+            "types": [
+                "normal"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 72
+                },
+                {
+                    "name": "special-defense",
+                    "value": 35
+                },
+                {
+                    "name": "special-attack",
+                    "value": 25
+                },
+                {
+                    "name": "defense",
+                    "value": 35
+                },
+                {
+                    "name": "attack",
+                    "value": 56
+                },
+                {
+                    "name": "hp",
+                    "value": 30
+                }
+            ],
+            "description": "Bites anything\nwhen it attacks.\nSmall and very\fquick, it is a\ncommon sight in\nmany places."
+        },
+        {
+            "name": "raticate",
+            "id": "20",
+            "types": [
+                "normal"
+            ],
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
+            "stats": [
+                {
+                    "name": "speed",
+                    "value": 97
+                },
+                {
+                    "name": "special-defense",
+                    "value": 70
+                },
+                {
+                    "name": "special-attack",
+                    "value": 50
+                },
+                {
+                    "name": "defense",
+                    "value": 60
+                },
+                {
+                    "name": "attack",
+                    "value": 81
+                },
+                {
+                    "name": "hp",
+                    "value": 55
+                }
+            ],
+            "description": "It uses its whis­\nkers to maintain\nits balance.\fIt apparently\nslows down if\nthey are cut off."
+        }
+    ],
+    "moves": [
+        {
+            "name": "tackle",
+            "learnLevel": 1,
+            "type": "normal"
+        },
+        {
+            "name": "growl",
+            "learnLevel": 1,
+            "type": "normal"
+        },
+        {
+            "name": "leech-seed",
+            "learnLevel": 7,
+            "type": "grass"
+        },
+        {
+            "name": "vine-whip",
+            "learnLevel": 13,
+            "type": "grass"
+        },
+        {
+            "name": "poison-powder",
+            "learnLevel": 20,
+            "type": "poison"
+        },
+        {
+            "name": "razor-leaf",
+            "learnLevel": 27,
+            "type": "grass"
+        },
+        {
+            "name": "growth",
+            "learnLevel": 34,
+            "type": "normal"
+        },
+        {
+            "name": "sleep-powder",
+            "learnLevel": 41,
+            "type": "grass"
+        },
+        {
+            "name": "solar-beam",
+            "learnLevel": 48,
+            "type": "grass"
+        }
+    ]
+}
