@@ -12,27 +12,42 @@ class PokemonListViewController: UIViewController {
 
     @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    
-    let requestMaker = RequestMaker()
-    
-    var pokemonList = [Pokemon]()
-    
+
+    let presenter: PokemonListPresenterType = PokemonListPresenter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        self.bind()
         self.configTable()
-        self.fetchData()
+        self.presenter.fetchData()
     }
-    
+
     private func configTable() {
         self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView.dataSource = presenter
     }
 
 }
 
+extension PokemonListViewController: PokemonListViewType {
+    func reloadData() {
+        self.activityIndicatorView.isHidden = true
+        self.tableView.reloadData()
+    }
+}
 
-extension PokemonListViewController: UITableViewDataSource {
+class PokemonListPresenter: NSObject {
+
+    weak var view: PokemonListViewType?
+
+    private let requestMaker = RequestMaker()
+
+    private var pokemonList = [Pokemon]()
+
+}
+
+extension PokemonListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.pokemonList.count
     }
@@ -54,26 +69,26 @@ extension PokemonListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = self.storyboard
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            detailViewController.pokemon = self.pokemonList[indexPath.row]
+            detailViewController.pokemon = self.presenter.pokemon(at: indexPath.row)
             self.navigationController?.present(detailViewController, animated: true)
         }
     }
 }
 
-// TODO: criar uma ViewModel de verdade
-typealias PokemonListViewModel = PokemonListViewController
+extension PokemonListPresenter: PokemonListPresenterType {
 
-extension PokemonListViewModel {
-    
     func fetchData() {
         requestMaker.make(withEndpoint: .list) { (pokemonList: PokemonList) in
             self.pokemonList = pokemonList.pokemons
             
             DispatchQueue.main.async {
-               self.activityIndicatorView.isHidden = true
-               self.tableView.reloadData()
+                self.view?.reloadData()
             }
         }
     }
-    
+
+    func pokemon(at index: Int) -> Pokemon {
+        return self.pokemonList[index]
+    }
+
 }
