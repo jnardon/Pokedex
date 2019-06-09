@@ -1,5 +1,5 @@
 //
-//  PokemonListViewControllerTests.swift
+//  PokemonListPresenterTests.swift
 //  PokedexTests
 //
 //  Created by Marcelo Gobetti on 6/9/19.
@@ -9,7 +9,7 @@
 @testable import Pokedex
 import XCTest
 
-class PokemonListViewControllerTests: XCTestCase {
+class PokemonListPresenterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,9 +19,20 @@ class PokemonListViewControllerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        let vc = PokemonListViewController()
-        XCTAssertNotNil(vc.view)
+    func testReloadDataIsCalledOnSuccess() {
+        let view = PokemonListViewMock()
+        view.bind()
+        view.presenter.fetchData()
+        XCTAssertTrue(view.didCallReloadData)
     }
 
+}
+
+class PokemonListViewMock: PokemonListViewType {
+    var presenter: PokemonListPresenterType = PokemonListPresenter()
+    var didCallReloadData = false
+
+    func reloadData() {
+        didCallReloadData = true
+    }
 }
