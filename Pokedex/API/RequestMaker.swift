@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias RequestResult<Success> = Result<Success, RequestMaker.Error>
+
 class RequestMaker {
     static let decoder = JSONDecoder()
     
@@ -34,10 +36,28 @@ class RequestMaker {
             }
         }
     }
+
+    enum Error: Swift.Error {
+        case some(Swift.Error)
+        case missingData
+    }
     
     let baseUrl = "http://localhost:3000/"
     let session = URLSession.shared
-    typealias CompletionCallback<T: Decodable> = (T) -> Void
+    typealias CompletionCallback<T: Decodable> = (RequestResult<T>) -> Void
+    typealias SuccessCallback<T: Decodable> = (T) -> Void
+
+    func make<T: Decodable>(withEndpoint endpoint: Endpoint,
+                            completion: @escaping SuccessCallback<T>) {
+        make(withEndpoint: endpoint) { (result: RequestResult<T>) in
+            switch result {
+            case .success(let decodable):
+                completion(decodable)
+            case .failure:
+                break
+            }
+        }
+    }
     
     func make<T: Decodable>(withEndpoint endpoint: Endpoint,
                             completion: @escaping CompletionCallback<T>) {
@@ -47,27 +67,24 @@ class RequestMaker {
         }
         
         let dataTask = session.dataTask(with: url) {
-            (data: Data?, response: URLResponse?, error: Error?) in
+            (data: Data?, response: URLResponse?, error: Swift.Error?) in
             
             guard error == nil else {
-                print(error)
+                completion(.failure(.some(error!)))
                 return
             }
             
             guard let data = data else {
-                print("não veio")
+                completion(.failure(Error.missingData))
                 return
             }
             
             do {
                 let decodedObject = try type(of: self).decoder.decode(T.self, from: data)
-                completion(decodedObject)
-                
+                completion(.success(decodedObject))
             } catch let error {
-                print(error)
+                completion(.failure(.some(error)))
             }
-            
-            //            print(String(data: data, encoding: .utf8)!)
         }
         
         dataTask.resume()

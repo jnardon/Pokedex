@@ -37,4 +37,20 @@ class PokedexTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1)
     }
+
+    func testRequestThrowsErrorIfDeserializationFails() {
+        let expectation = XCTestExpectation(description: "")
+
+        let requestMaker = RequestMaker()
+        requestMaker.make(withEndpoint: .list) { (result: RequestResult<PokemonResponse>) in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure:
+                expectation.fulfill()
+            }
+        }
+
+        wait(for: [expectation], timeout: 1)
+    }
 }

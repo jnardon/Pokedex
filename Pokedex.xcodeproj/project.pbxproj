@@ -26,6 +26,7 @@
 		ABD8C95422AADA6F00AB3718 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8C95322AADA6F00AB3718 /* GradientView.swift */; };
 		D4B888A222ADA4C50042894A /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888A122ADA4C50042894A /* PokedexTests.swift */; };
 		D4B888AB22ADA50D0042894A /* pokemons.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B888AA22ADA50D0042894A /* pokemons.json */; };
+		D4B888AD22ADB7160042894A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B888AC22ADB7160042894A /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D4B888A122ADA4C50042894A /* PokedexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTests.swift; sourceTree = "<group>"; };
 		D4B888A322ADA4C50042894A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4B888AA22ADA50D0042894A /* pokemons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pokemons.json; sourceTree = "<group>"; };
+		D4B888AC22ADB7160042894A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F971D046DECCDE613A6170D3 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 			children = (
 				ABD8C94D22AAC55100AB3718 /* PokemonType.swift */,
 				96DD996822ABE1A00036A7A7 /* Pokemon.swift */,
+				D4B888AC22ADB7160042894A /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				96DD997022AC2F0F0036A7A7 /* DetailViewController.swift in Sources */,
 				96DD996722ABE16C0036A7A7 /* RequestMaker.swift in Sources */,
 				ABD8C93B22AAC4FA00AB3718 /* AppDelegate.swift in Sources */,
+				D4B888AD22ADB7160042894A /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
