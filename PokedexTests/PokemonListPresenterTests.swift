@@ -20,19 +20,28 @@ class PokemonListPresenterTests: XCTestCase {
     }
 
     func testReloadDataIsCalledOnSuccess() {
-        let view = PokemonListViewMock()
+        let expectation = XCTestExpectation(description: "")
+
+        let view = PokemonListViewMock(onReloadDataCalled: {
+            expectation.fulfill()
+        })
         view.bind()
         view.presenter.fetchData()
-        XCTAssertTrue(view.didCallReloadData)
+
+        wait(for: [expectation], timeout: 1.0)
     }
 
 }
 
 class PokemonListViewMock: PokemonListViewType {
-    var presenter: PokemonListPresenterType = PokemonListPresenter()
-    var didCallReloadData = false
+    let presenter: PokemonListPresenterType = PokemonListPresenter()
+    let onReloadDataCalled: () -> Void
+
+    init(onReloadDataCalled: @escaping () -> Void) {
+        self.onReloadDataCalled = onReloadDataCalled
+    }
 
     func reloadData() {
-        didCallReloadData = true
+        onReloadDataCalled()
     }
 }
