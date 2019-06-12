@@ -13,6 +13,9 @@
 		96DD996C22AC11E80036A7A7 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996B22AC11E80036A7A7 /* PokemonTableViewCell.swift */; };
 		96DD996E22AC20B40036A7A7 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996D22AC20B40036A7A7 /* UIImageViewExtensions.swift */; };
 		96DD997022AC2F0F0036A7A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996F22AC2F0F0036A7A7 /* DetailViewController.swift */; };
+		AB7657B122B1265F00D1060A /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7657B022B1265F00D1060A /* UIColorExtensions.swift */; };
+		AB7657B422B140F600D1060A /* PokemonTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7657B322B140F600D1060A /* PokemonTypeView.swift */; };
+		AB7657B622B1416200D1060A /* PokemonTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7657B522B1416200D1060A /* PokemonTypeView.xib */; };
 		ABD8C93B22AAC4FA00AB3718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8C93A22AAC4FA00AB3718 /* AppDelegate.swift */; };
 		ABD8C93D22AAC4FA00AB3718 /* PokemonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD8C93C22AAC4FA00AB3718 /* PokemonListViewController.swift */; };
 		ABD8C94022AAC4FA00AB3718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD8C93E22AAC4FA00AB3718 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		96DD996B22AC11E80036A7A7 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		96DD996D22AC20B40036A7A7 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		96DD996F22AC2F0F0036A7A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AB7657B022B1265F00D1060A /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		AB7657B322B140F600D1060A /* PokemonTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeView.swift; sourceTree = "<group>"; };
+		AB7657B522B1416200D1060A /* PokemonTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTypeView.xib; sourceTree = "<group>"; };
 		ABD8C93722AAC4FA00AB3718 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD8C93A22AAC4FA00AB3718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABD8C93C22AAC4FA00AB3718 /* PokemonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 				96DD996B22AC11E80036A7A7 /* PokemonTableViewCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AB7657B222B140E100D1060A /* PokemonTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				AB7657B322B140F600D1060A /* PokemonTypeView.swift */,
+				AB7657B522B1416200D1060A /* PokemonTypeView.xib */,
+			);
+			path = PokemonTypeView;
 			sourceTree = "<group>";
 		};
 		ABD8C92E22AAC4FA00AB3718 = {
@@ -132,6 +147,7 @@
 			children = (
 				ABD8C95022AAD75F00AB3718 /* UIViewExtensions.swift */,
 				96DD996D22AC20B40036A7A7 /* UIImageViewExtensions.swift */,
+				AB7657B022B1265F00D1060A /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +155,7 @@
 		ABD8C95222AADA6200AB3718 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				AB7657B222B140E100D1060A /* PokemonTypeView */,
 				ABD8C95322AADA6F00AB3718 /* GradientView.swift */,
 			);
 			path = CustomViews;
@@ -214,6 +231,7 @@
 			files = (
 				ABD8C94522AAC4FC00AB3718 /* LaunchScreen.storyboard in Resources */,
 				ABD8C94222AAC4FC00AB3718 /* Assets.xcassets in Resources */,
+				AB7657B622B1416200D1060A /* PokemonTypeView.xib in Resources */,
 				ABD8C94022AAC4FA00AB3718 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,10 +292,12 @@
 			files = (
 				96DD996922ABE1A00036A7A7 /* Pokemon.swift in Sources */,
 				96DD996C22AC11E80036A7A7 /* PokemonTableViewCell.swift in Sources */,
+				AB7657B422B140F600D1060A /* PokemonTypeView.swift in Sources */,
 				ABD8C93D22AAC4FA00AB3718 /* PokemonListViewController.swift in Sources */,
 				ABD8C94E22AAC55100AB3718 /* PokemonType.swift in Sources */,
 				96DD996E22AC20B40036A7A7 /* UIImageViewExtensions.swift in Sources */,
 				ABD8C95422AADA6F00AB3718 /* GradientView.swift in Sources */,
+				AB7657B122B1265F00D1060A /* UIColorExtensions.swift in Sources */,
 				ABD8C95122AAD76000AB3718 /* UIViewExtensions.swift in Sources */,
 				96DD997022AC2F0F0036A7A7 /* DetailViewController.swift in Sources */,
 				96DD996722ABE16C0036A7A7 /* RequestMaker.swift in Sources */,
