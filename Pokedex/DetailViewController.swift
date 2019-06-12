@@ -7,71 +7,82 @@
 //
 
 import UIKit
+import Nuke
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var gradientView: GradientView!
+    
+    @IBOutlet weak var pokemonImageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var pokemonImageViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var pokemonImageViewCenterVerticallyConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var pokemonImageViewTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var pokemonTypeView: PokemonTypeView!
+    
+    var pokemon: Pokemon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.initialConfig()
         
+        if let type = pokemon?.types.first {
+            self.pokemonTypeView.config(type: type)
+        }
     }
     
-    @IBAction func backAction(_ sender: Any) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.loadPokemonAnimation()
+        self.requestPokemon()
+    }
+    
+    func requestPokemon() {
+        if let pokemon = self.pokemon {
+            let requestMaker = RequestMaker()
+            requestMaker.make(withEndpoint: .details(query: pokemon.id)) { (pokemon: Pokemon) in
+                self.animateImagePokemonToTop()
+            }
+        }
+    }
+    
+    func animateImagePokemonToTop() {
+        DispatchQueue.main.async {
+            self.imageView.layer.removeAllAnimations()
+            
+            self.pokemonImageViewCenterVerticallyConstraint.priority = UILayoutPriority(rawValue: 900)
+            self.pokemonImageViewTopConstraint.priority = UILayoutPriority(rawValue: 999)
+            self.pokemonImageViewHeightConstraint.constant = 80
+            self.pokemonImageViewWidthConstraint.constant = 80
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.imageView.alpha = 1
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    func loadPokemonAnimation() {
+        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse], animations: {
+            self.imageView.alpha = 0.2
+        })
+    }
+    
+    func initialConfig() {
+        if let pokemon = self.pokemon {
+            self.gradientView.startColor = pokemon.types.first?.color ?? .black
+            self.gradientView.endColor = pokemon.types.first?.color?.lighter() ?? .white
+            
+            self.imageView.loadImage(from: pokemon.image)
+        }
+    }
+    
+    @IBAction func dismissAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-}
-
-extension DetailViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 {
-            return nil
-        } else if section == 1 {
-            return tableView.dequeueReusableCell(withIdentifier: "header")
-        }
-        
-        return nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 0
-        } else if section == 1 {
-            return 48
-        }
-        
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 130
-        }
-        
-        return 1500
-    }
-}
-
-extension DetailViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: "empty-space", for: indexPath)
-        } else {
-            return tableView.dequeueReusableCell(withIdentifier: "second-section-content", for: indexPath)
-        }
-    }
-    
     
 }
