@@ -25,7 +25,7 @@ class PokedexTests: XCTestCase {
         do {
             _ = try Pokedex.RequestMaker.decoder.decode(PokemonList.self, from: data)
         } catch {
-            XCTFail()
+            XCTFail((error as NSError).debugDescription)
         }
     }
 }
