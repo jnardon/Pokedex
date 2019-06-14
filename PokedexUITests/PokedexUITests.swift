@@ -29,7 +29,7 @@ class PokedexUITests: XCTestCase {
     func testExample() {
         let app = XCUIApplication()
         let cells = app.descendants(matching: .cell)
-        let firstCell = cells.element
+        let firstCell = cells.element(boundBy: 0)
         firstCell.tap()
     }
 
