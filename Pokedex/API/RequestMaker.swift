@@ -8,7 +8,8 @@
 
 import Foundation
 
-class RequestMaker {
+public class RequestMaker {
+    public static let decoder = JSONDecoder()
     
     enum Endpoint {
         
@@ -59,7 +60,7 @@ class RequestMaker {
             }
             
             do {
-                let decodedObject = try JSONDecoder().decode(T.self, from: data)
+                let decodedObject = try type(of: self).decoder.decode(T.self, from: data)
                 completion(decodedObject)
                 
             } catch let error {

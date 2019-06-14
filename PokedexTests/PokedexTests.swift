@@ -22,6 +22,10 @@ class PokedexTests: XCTestCase {
     func testExample() {
         let jsonURL = Bundle(for: PokedexTests.self).url(forResource: "pokemons", withExtension: "json")!
         let data = try! Data(contentsOf: jsonURL)
-        print(String(data: data, encoding: .utf8))
+        do {
+            _ = try Pokedex.RequestMaker.decoder.decode(PokemonList.self, from: data)
+        } catch {
+            XCTFail()
+        }
     }
 }
