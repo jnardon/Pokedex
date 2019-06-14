@@ -22,8 +22,7 @@ class PokemonListPresenterTests: XCTestCase {
     func testReloadDataIsCalledOnSuccess() {
         let expectation = XCTestExpectation(description: "")
 
-        let session = URLSessionMock(data: listStub)
-        let requestMaker = RequestMaker(session: session)
+        let requestMaker = RequestMakerStubFactory.success()
         let presenter = PokemonListPresenter(requestMaker: requestMaker)
 
         let view = PokemonListViewMock(presenter: presenter, onReloadDataCalled: {

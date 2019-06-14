@@ -26,7 +26,7 @@ class RequestMakerTests: XCTestCase {
     func testRequestList() {
         let expectation = XCTestExpectation(description: "")
 
-        let requestMaker = RequestMaker()
+        let requestMaker = RequestMakerStubFactory.success()
         requestMaker.make(withEndpoint: .list) { (list: PokemonList) in
             XCTAssertGreaterThan(list.pokemons.count, 0)
             expectation.fulfill()
@@ -38,7 +38,7 @@ class RequestMakerTests: XCTestCase {
     func testRequestThrowsErrorIfDeserializationFails() {
         let expectation = XCTestExpectation(description: "")
 
-        let requestMaker = RequestMaker()
+        let requestMaker = RequestMakerStubFactory.success()
         requestMaker.make(withEndpoint: .list) { (result: RequestResult<PokemonResponse>) in
             switch result {
             case .success:
