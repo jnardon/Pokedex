@@ -28,8 +28,13 @@ class PokedexTests: XCTestCase {
 
     func testRequestList() {
         let requestMaker = RequestMaker()
+        var received: PokemonList?
         requestMaker.make(withEndpoint: .list) { (list: PokemonList) in
-            XCTAssertGreaterThan(list.pokemons.count, 0)
+            received = list
         }
+        sleep(1)
+        // xcode 11: let unwrappedReceived = try XCTUnwrap(received)
+        XCTAssertNotNil(received) // useless
+        XCTAssertGreaterThan(received!.pokemons.count, 0)
     }
 }
