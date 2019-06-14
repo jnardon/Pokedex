@@ -31,6 +31,7 @@ class PokedexUITests: XCTestCase {
         let cells = app.descendants(matching: .cell)
         let firstCell = cells.firstMatch
         firstCell.tap()
+        XCTAssertTrue(app.otherElements["detailsView"].waitForExistence(timeout: 1.0))
     }
 
 }
