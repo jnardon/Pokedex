@@ -8,7 +8,13 @@
 
 import Foundation
 
-public struct PokemonList: Codable {
+public struct PokemonResponse: Codable {
+
+    let list: PokemonList
+
+}
+
+struct PokemonList: Codable {
     
     let pokemons: [Pokemon]
     
