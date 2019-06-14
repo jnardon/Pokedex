@@ -27,9 +27,10 @@ class PokedexUITests: XCTestCase {
     }
 
     func testExample() {
-        let element = XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element
-        element.children(matching: .other).element(boundBy: 1).tap()
-        element.children(matching: .other).element.tap()
+        let app = XCUIApplication()
+        let cells = app.children(matching: .cell)
+        let firstCell = cells.element
+        firstCell.tap()
     }
 
 }
