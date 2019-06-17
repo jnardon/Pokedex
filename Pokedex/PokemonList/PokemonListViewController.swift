@@ -13,12 +13,12 @@ class PokemonListViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
-    let presenter: PokemonListPresenterType = PokemonListPresenter()
+    let presenter = PokemonListPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.bind()
+        self.presenter.view = self
         self.configTable()
         self.presenter.fetchData()
     }
@@ -29,6 +29,9 @@ class PokemonListViewController: UIViewController {
     }
 
 }
+
+// VIPER
+// View, Interactor, Presenter, Entity, Router
 
 extension PokemonListViewController: PokemonListViewType {
     func reloadData() {
@@ -46,4 +49,45 @@ extension PokemonListViewController: UITableViewDelegate {
             self.navigationController?.present(detailViewController, animated: true)
         }
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let actionType = self.presenter.swipeAction(for: indexPath.row)
+        
+        let contextualAction = UIContextualAction(style: .normal, title: actionType.text) { (action, view, handler) in
+            
+            self.presenter.swipe(at: indexPath.row)
+            
+            handler(true)
+        }
+        
+        contextualAction.backgroundColor = actionType.color
+        
+        let configuration = UISwipeActionsConfiguration(actions: [contextualAction])
+        return configuration
+    }
+}
+
+enum PokemonSwipeAction {
+    
+    var color: UIColor {
+        switch self {
+        case .addFavorite:
+            return .purple
+        case .removeFavorite:
+            return .red
+        }
+    }
+    
+    case addFavorite, removeFavorite
+    
+    var text: String {
+        switch self {
+        case .addFavorite:
+            return "Adicionar"
+        case .removeFavorite:
+            return "Remover"
+        }
+    }
+    
 }

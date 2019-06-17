@@ -9,7 +9,6 @@
 import UIKit
 
 protocol PokemonListViewType: AnyObject {
-    var presenter: PokemonListPresenterType { get }
     func reloadData()
 }
 
@@ -19,8 +18,14 @@ protocol PokemonListPresenterType: UITableViewDataSource {
     func pokemon(at index: Int) -> Pokemon
 }
 
-extension PokemonListViewType {
-    func bind() {
-        presenter.view = self
-    }
+protocol PokemonListInteractorInput {
+    
+    func fetchData()
+    
+}
+protocol PokemonListInteractorOutput: AnyObject {
+    
+    func offlineStatus()
+    func dataFetched(_ data: PokemonList)
+    
 }
