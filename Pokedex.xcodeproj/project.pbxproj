@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6235EAF744958A2A5241336A /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082900A5B7582BD4C858BFF7 /* Pods_Pokedex.framework */; };
+		969E31B722BA5E4200BE7D17 /* FavoriteListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E31B622BA5E4200BE7D17 /* FavoriteListContract.swift */; };
+		969E31B922BA5F5E00BE7D17 /* FavoriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E31B822BA5F5E00BE7D17 /* FavoriteListPresenter.swift */; };
+		969E31BB22BA5F6C00BE7D17 /* FavoriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E31BA22BA5F6C00BE7D17 /* FavoriteListInteractor.swift */; };
+		969E31BD22BA5F7800BE7D17 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E31BC22BA5F7800BE7D17 /* FavoriteListViewController.swift */; };
+		969E31BF22BA614600BE7D17 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E31BE22BA614600BE7D17 /* Endpoint.swift */; };
 		96DD996722ABE16C0036A7A7 /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996622ABE16C0036A7A7 /* RequestMaker.swift */; };
 		96DD996922ABE1A00036A7A7 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996822ABE1A00036A7A7 /* Pokemon.swift */; };
 		96DD996C22AC11E80036A7A7 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DD996B22AC11E80036A7A7 /* PokemonTableViewCell.swift */; };
@@ -53,6 +58,11 @@
 
 /* Begin PBXFileReference section */
 		082900A5B7582BD4C858BFF7 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		969E31B622BA5E4200BE7D17 /* FavoriteListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListContract.swift; sourceTree = "<group>"; };
+		969E31B822BA5F5E00BE7D17 /* FavoriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListPresenter.swift; sourceTree = "<group>"; };
+		969E31BA22BA5F6C00BE7D17 /* FavoriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListInteractor.swift; sourceTree = "<group>"; };
+		969E31BC22BA5F7800BE7D17 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
+		969E31BE22BA614600BE7D17 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		96DD996622ABE16C0036A7A7 /* RequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
 		96DD996822ABE1A00036A7A7 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		96DD996B22AC11E80036A7A7 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,11 +132,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		969E31B522BA5E2D00BE7D17 /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				969E31B622BA5E4200BE7D17 /* FavoriteListContract.swift */,
+				969E31BC22BA5F7800BE7D17 /* FavoriteListViewController.swift */,
+				969E31B822BA5F5E00BE7D17 /* FavoriteListPresenter.swift */,
+				969E31BA22BA5F6C00BE7D17 /* FavoriteListInteractor.swift */,
+			);
+			path = FavoriteList;
+			sourceTree = "<group>";
+		};
 		96DD996522ABE1530036A7A7 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				96DD996622ABE16C0036A7A7 /* RequestMaker.swift */,
 				D42E95DD22B52FA20016DF06 /* Result.swift */,
+				969E31BE22BA614600BE7D17 /* Endpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -173,6 +195,7 @@
 		ABD8C93922AAC4FA00AB3718 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				969E31B522BA5E2D00BE7D17 /* FavoriteList */,
 				D4996B9322B550E300E1C780 /* PokemonList */,
 				96DD996A22AC11CC0036A7A7 /* Components */,
 				96DD996522ABE1530036A7A7 /* API */,
@@ -447,12 +470,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43A04AB22B80EC70000CDF0 /* PokemonListInteractor.swift in Sources */,
+				969E31B722BA5E4200BE7D17 /* FavoriteListContract.swift in Sources */,
 				96DD996922ABE1A00036A7A7 /* Pokemon.swift in Sources */,
 				D42E95DE22B52FA20016DF06 /* Result.swift in Sources */,
 				96DD996C22AC11E80036A7A7 /* PokemonTableViewCell.swift in Sources */,
 				AB7657B422B140F600D1060A /* PokemonTypeView.swift in Sources */,
+				969E31B922BA5F5E00BE7D17 /* FavoriteListPresenter.swift in Sources */,
+				969E31BF22BA614600BE7D17 /* Endpoint.swift in Sources */,
 				ABD8C93D22AAC4FA00AB3718 /* PokemonListViewController.swift in Sources */,
+				969E31BD22BA5F7800BE7D17 /* FavoriteListViewController.swift in Sources */,
 				ABD8C94E22AAC55100AB3718 /* PokemonType.swift in Sources */,
+				969E31BB22BA5F6C00BE7D17 /* FavoriteListInteractor.swift in Sources */,
 				D43A04AC22B80EC70000CDF0 /* PokemonListContract.swift in Sources */,
 				96DD996E22AC20B40036A7A7 /* UIImageViewExtensions.swift in Sources */,
 				ABD8C95422AADA6F00AB3718 /* GradientView.swift in Sources */,

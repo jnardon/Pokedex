@@ -23,8 +23,8 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ApH-ah-87V" kind="relationship" relationship="viewControllers" id="kdg-Mx-WrV"/>
-                        <segue destination="2kC-8u-nWf" kind="relationship" relationship="viewControllers" id="klo-5h-JoO"/>
+                        <segue destination="nPZ-3K-rRo" kind="relationship" relationship="viewControllers" id="jNo-xD-EF3"/>
+                        <segue destination="ApH-ah-87V" kind="relationship" relationship="viewControllers" id="Vbq-pA-O45"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPa-Qx-0EE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,6 +112,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTe-53-iif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="602.24887556221893"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="DZy-zv-XBS">
+            <objects>
+                <viewController id="nPZ-3K-rRo" customClass="FavoriteListViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Rn-Pf-FhS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tFs-kp-H8X"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="PMV-46-hDF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxf-8T-2pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="-850"/>
         </scene>
         <!--Pokemon-->
         <scene sceneID="fPA-nR-7p0">
